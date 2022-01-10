@@ -109,10 +109,9 @@ const exclaim = function (str) {
 };
 
 // arrow
-// declaration
+// declaration <- answer
 // expression
 
-let answer = Declaration;
 ////////////////// PROBLEM 8 ////////////////////
 
 /*
@@ -124,17 +123,20 @@ const exclaimTwo = (str) => {
   return str.toUpperCase() + "!!!";
 };
 
-// arrow
+// arrow <- answer
 // declaration
 // expression
-let answerTwo = arrow;
+
 /*
   Rewrite exclaimTwo to be a single line.
   Call your new function exclaimThree
 
   Brownie points if you use a template string
 */
-
+const exclaimThree = (str) => {
+  return `${str.toUpperCase()}` + `!!!`;
+};
+console.log(exclaimThree("hello there"));
 ////////////////// PROBLEM 9 ////////////////////
 
 /*
@@ -148,7 +150,7 @@ function exclaimFour(str) {
 
 // arrow
 // declaration
-// expression
+// expression <- answer
 
 ////////////////// PROBLEM 10 ////////////////////
 /*
@@ -160,6 +162,15 @@ function exclaimFour(str) {
 */
 
 //CODE HERE
+function nameCheck(name) {
+  if (name === "Steven") {
+    return "What is up Steven?";
+  } else if (name === "Brian") {
+    return "Hey Brian!";
+  } else return `Cool name, ${name}!`;
+}
+let nameGreeting = nameCheck("Braden");
+console.log(nameGreeting);
 
 ////////////////// PROBLEM 11 ////////////////////
 /*
@@ -172,7 +183,18 @@ function exclaimFour(str) {
 */
 
 //CODE HERE
+function faveColorFinder(color) {
+  if (color === "red") {
+    return "red is a great color";
+  } else if (color === "green") {
+    return "green is a solid favorite color";
+  } else if (color === "black") {
+    return "so trendy";
+  } else return "you need to evaluate your favorite color choice";
+}
 
+let colorRating = faveColorFinder("green");
+console.log(colorRating);
 ////////////////// PROBLEM 12 ////////////////////
 let namesArr = ["Cameron", "Riley", "Eric", "Brenna", "Karl"];
 /*
@@ -182,7 +204,12 @@ let namesArr = ["Cameron", "Riley", "Eric", "Brenna", "Karl"];
 */
 
 //CODE HERE
-
+function printAllNames(array) {
+  for (i = 0; i < array.length; i++) {
+    console.log(array[i]);
+  }
+}
+console.log(printAllNames(namesArr));
 ////////////////// PROBLEM 13 ////////////////////
 /*
   Create a function called thatsOdd that takes in a single argument (a number).
@@ -192,7 +219,14 @@ let namesArr = ["Cameron", "Riley", "Eric", "Brenna", "Karl"];
 */
 
 //CODE HERE
+function thatsOdd(number) {
+  if (number % 2 === 0) {
+    return `That's not odd!`;
+  } else return "That is odd indeed!";
+}
 
+let oddChecker = thatsOdd(4);
+console.log(oddChecker);
 ////////////////// PROBLEM 14 ////////////////////
 
 /*
@@ -204,7 +238,9 @@ let namesArr = ["Cameron", "Riley", "Eric", "Brenna", "Karl"];
 */
 
 //CODE HERE
+const bestMovie = (movie) => `${movie} is the best movie ever!`;
 
+console.log(bestMovie(`A Knight's Tale`));
 ////////////////// PROBLEM 15 ////////////////////
 let bigOrSmallArray = [1, 101, 102, 2, 103, 4, 5, 6, 107];
 /* 
@@ -217,7 +253,17 @@ let bigOrSmallArray = [1, 101, 102, 2, 103, 4, 5, 6, 107];
 */
 
 //CODE HERE
-
+function bigOrSmall(arr) {
+  let answers = [];
+  for (let i = 0; i < bigOrSmallArray.length; i++) {
+    if (bigOrSmallArray[i] > 100) {
+      answers.push("big");
+    } else answers.push("small");
+  }
+  return (arrayEvaluator = answers);
+}
+bigOrSmall(bigOrSmallArray);
+console.log(arrayEvaluator);
 ////////////////// PROBLEM 16 ////////////////////
 let contestants = [
   "Katniss",
@@ -237,7 +283,16 @@ let loser = "Glimmer";
 */
 
 //CODE HERE
-
+function theElimantor(arr, loser) {
+  for (i = 0; i < arr.length; i++) {
+    if (arr[i] == loser) {
+      arr.splice(i, 1);
+    }
+  }
+  return arr;
+}
+let updatedArray = theElimantor(contestants, loser);
+console.log(updatedArray);
 ////////////////// PROBLEM 17 ////////////////////
 let sampleString = "Hi, my name is Kylo.";
 /*
