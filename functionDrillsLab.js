@@ -301,6 +301,11 @@ let sampleString = "Hi, my name is Kylo.";
 */
 
 //CODE HERE
+const upper = (str) => {
+  return str.toUpperCase();
+};
+
+console.log(upper(sampleString));
 
 ////////////////// PROBLEM 18 ////////////////////
 /*
@@ -312,6 +317,13 @@ let sampleString = "Hi, my name is Kylo.";
   If it does, return 'email verified' and if doesn't, 
   return 'must provide a valid email address'
 */
+function emailCheck(email) {
+  toString(email).trim;
+  if (email.includes("@")) {
+    return "email verified.";
+  } else return "must provide a valid email address";
+}
+console.log(emailCheck(" ryan@email.com  "));
 
 ////////////////// PROBLEM 19 ////////////////////
 /*
